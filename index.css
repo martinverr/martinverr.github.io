@@ -1,0 +1,100 @@
+:root{
+  --bg-color1: rgb(250,250,250);
+  --bg-color2: rgba(240, 240, 240);
+  --selected: rgba(204, 0, 0, 0.3);
+}
+.dark{
+  --bg-color1: rgb(50,50,50);
+  --bg-color2: rgba(100, 100, 100);
+  --color: white;
+  --color2: rgb(100,200,250);
+  --selected: rgba(255,255,255,0.3);
+}
+
+body{
+  background-color: var(--bg-color1);
+  color: var(--color);
+  margin: 0px;
+  padding: 0px;
+}
+
+
+a{
+  opacity: 0.75;
+  color: var(--color2);
+}
+a:hover{
+  font-weight: bolder;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: monospace;
+    margin-bottom: 0.5em;
+}
+
+hr{
+  margin-top: 1.5rem;
+}
+
+nav{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: flex-end;
+
+  height: 3rem;
+  padding-left: 1rem;
+  background-color: var(--bg-color2);
+  z-index: 1;
+}
+
+a.nav-links{
+  position: relative;
+  bottom: 0.3em;
+  color: rgba(50, 50, 50, 1);
+  text-decoration: none;
+}
+a.nav-links:hover{
+  font-weight: normal;
+  color: rgba(50, 50, 50, 1);
+}
+
+.nav-item{
+  font-family: monospace;
+  color: rgba(50, 50, 50, 1);
+  font-size: 2rem;
+  //margin: 0px 0.3em 0px 0.3em;
+  padding:0.5em;
+}
+.nav-item:hover {
+  animation-name: bg-select;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+.first-nav-item{
+  margin-right: auto;
+}
+
+li.links{
+  margin: 0.5em;
+  font-size: 1.5em;
+  font-family: monospace;
+}
+
+#general-list{
+  margin-top: 3.5rem;
+}
+
+#dark{
+  color: var(--color2);
+  size: 0.75em;
+}
+
+@keyframes bg-select{
+  100%{
+      background-color: var(--selected);
+    }
+}
